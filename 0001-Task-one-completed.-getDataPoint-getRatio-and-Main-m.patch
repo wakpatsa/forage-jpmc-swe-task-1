@@ -1,0 +1,170 @@
+From a579d25240a6ac0955d368876c7cb556cd95c452 Mon Sep 17 00:00:00 2001
+From: William Akpatsa <william@bistasol.com>
+Date: Thu, 27 Apr 2023 13:17:08 +0000
+Subject: [PATCH] Task one completed. getDataPoint, getRatio and Main methods
+ changed
+
+---
+ .idea/.gitignore                               |   3 +++
+ .idea/forage-jpmc-swe-task-1.iml               |  14 ++++++++++++++
+ .idea/inspectionProfiles/profiles_settings.xml |   6 ++++++
+ .idea/misc.xml                                 |   4 ++++
+ .idea/modules.xml                              |   8 ++++++++
+ .idea/vcs.xml                                  |   6 ++++++
+ __pycache__/client3.cpython-310.pyc            | Bin 0 -> 1076 bytes
+ client3.py                                     |  12 +++++++++---
+ 8 files changed, 50 insertions(+), 3 deletions(-)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/forage-jpmc-swe-task-1.iml
+ create mode 100644 .idea/inspectionProfiles/profiles_settings.xml
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/vcs.xml
+ create mode 100644 __pycache__/client3.cpython-310.pyc
+
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+index 0000000..26d3352
+--- /dev/null
++++ b/.idea/.gitignore
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+diff --git a/.idea/forage-jpmc-swe-task-1.iml b/.idea/forage-jpmc-swe-task-1.iml
+new file mode 100644
+index 0000000..8e5446a
+--- /dev/null
++++ b/.idea/forage-jpmc-swe-task-1.iml
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/venv" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++  <component name="PyDocumentationSettings">
++    <option name="format" value="PLAIN" />
++    <option name="myDocStringFormat" value="Plain" />
++  </component>
++</module>
+\ No newline at end of file
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+new file mode 100644
+index 0000000..105ce2d
+--- /dev/null
++++ b/.idea/inspectionProfiles/profiles_settings.xml
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <settings>
++    <option name="USE_PROJECT_PROFILE" value="false" />
++    <version value="1.0" />
++  </settings>
++</component>
+\ No newline at end of file
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+index 0000000..90ba53d
+--- /dev/null
++++ b/.idea/misc.xml
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (forage-jpmc-swe-task-1)" project-jdk-type="Python SDK" />
++</project>
+\ No newline at end of file
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+index 0000000..973696f
+--- /dev/null
++++ b/.idea/modules.xml
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/forage-jpmc-swe-task-1.iml" filepath="$PROJECT_DIR$/.idea/forage-jpmc-swe-task-1.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+index 0000000..35eb1dd
+--- /dev/null
++++ b/.idea/vcs.xml
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+diff --git a/__pycache__/client3.cpython-310.pyc b/__pycache__/client3.cpython-310.pyc
+new file mode 100644
+index 0000000000000000000000000000000000000000..694aebe09c374e72de08ae75b0253fea8b8c4319
+GIT binary patch
+literal 1076
+zcmYjQ&u`l{6ecOklJje6>w3$L3s7txmZrlnv@rGySc(BVWNm{D7~w%+#Aio|EIK5;
+zqMmc|{t)N5`~DhTcj|rEVW&MxNl*%We2;p1{NDFbW_x>s;7}Jo=%X$ne}~}RfqUdz
+zobE3)nrK=Q*{)R5CT23yOmZE`SaTi!L1agFbb@OFsZKAL{TaHj0r85i=n?t#3%Lno
+zy#>+v_Id~S`aPg)dQGnBHC^w9Ro?3oxQCfNc^^7(e?>=JK9D{6Q1;<{-Gv9xgNM)`
+z^FCQoN-m$`?gk{#hyIG)?CooMf@n|3VDl{^C&!Bq&%B=v4-ZR|tMbe^KYaG&*^|S|
+zIoLPf6#A>*uZn*tAvw;w5u?X(euvWy(R9fYtL~92>VwDjh>rFU#T9E}eiuhecEy);
+z$(GTQk2&Iq7f;0tYxFz^p~_PDGY}Pk1}%P5<s6*wMogdrt2|~1t-P9<qVl4Soj3VK
+zop>|LP77VfGh5`)#>!m`XdRDBqx>MQ<IB16U>RbqyO^7`sa;HKT^suOlh`2pf5&<_
+zIx%DaT3Ha!t4V=?Y*9@{KhB^MCuVLDEP_6V+`G}(ST%uz^Vu{%aIfLOW6^`pMtNC4
+z<v)KsdsA;sz#k#*7Y%Ma!EK>oETy~naJofp*vJFC+Y$W0dBbrBoo=feTkMPP!3(6L
+zFv5&Q(@Ca;s`QP2D&B@Kn_dP?CN~+k&S~?aHJg}MrwH#=DEA3QE)c;Or*@}#mt|8`
+zR9Uw8=w+Z#i$_i<FFr;RhmYK+0-J5t<`DD-i?peQd4mrmKX;~*9gE=1RPM}eSr(^{
+zE#UQXUUu48#xH+*{_2;S9yc`H9bBm?WLeD%RIZM(#sq4b)iG+SolI`4Bv{3uFm(r&
+zm?~d$3rg3WMsjBpY@-q0rojt;ZX<ScT`K<$89{s7GV<jVZ)6Ey2Oix%nzWbFl=6s2
+UX_RiH$u1ML6|hfxjQ`8o|6=$MG5`Po
+
+literal 0
+HcmV?d00001
+
+diff --git a/client3.py b/client3.py
+index 3fc09b7..4e389a0 100644
+--- a/client3.py
++++ b/client3.py
+@@ -35,14 +35,18 @@ def getDataPoint(quote):
+     stock = quote['stock']
+     bid_price = float(quote['top_bid']['price'])
+     ask_price = float(quote['top_ask']['price'])
+-    price = bid_price
++    price = (bid_price + ask_price) / 2
+     return stock, bid_price, ask_price, price
+ 
+ 
+ def getRatio(price_a, price_b):
+     """ Get ratio of price_a and price_b """
+     """ ------------- Update this function ------------- """
+-    return 1
++    if(price_b == 0):
++        # when price_b is 0 avoid throwing ZeroDivisionError
++        return
++
++    return price_a/price_b
+ 
+ 
+ # Main
+@@ -52,8 +56,10 @@ if __name__ == "__main__":
+         quotes = json.loads(urllib.request.urlopen(QUERY.format(random.random())).read())
+ 
+         """ ----------- Update to get the ratio --------------- """
++        prices = {}
+         for quote in quotes:
+             stock, bid_price, ask_price, price = getDataPoint(quote)
++            prices[stock] = price
+             print("Quoted %s at (bid:%s, ask:%s, price:%s)" % (stock, bid_price, ask_price, price))
+ 
+-        print("Ratio %s" % getRatio(price, price))
++        print("Ratio %s" % getRatio(prices["ABC"], prices["DEF"]))
+-- 
+2.38.1.windows.1
+
